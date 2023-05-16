@@ -1,0 +1,30 @@
+/*Global CSS*/
+
+body {overflow-y: hidden;
+background-color: pink;
+height: 100vh} 
+
+/*Class CSS*/
+
+.message {background-color: green;}
+
+.compose {background-color: purple;
+min-height: 20vh;}
+
+.inbox-desktop {background-color: red;
+}
+
+.message-compose-container {height:auto}
+
+/*ID CSS*/
+
+#search-bar-id {margin-top: 10px;}
+
+#compose-input {height:12vh}
+
+/*Media Queries*/
+
+    @media (min-width: 992px) 
+    {
+        #search-bar-id {margin-top: 0px;} /*Changes search bar margin top to avoid clipping in mobile/tablet format*/
+    }

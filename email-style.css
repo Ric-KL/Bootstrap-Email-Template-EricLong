@@ -1,6 +1,6 @@
 /*Global CSS*/
 
-body {overflow-y: hidden;
+body {overflow-y: auto;
 background-color: pink;
 height: 100vh} 
 

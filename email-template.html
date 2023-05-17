@@ -1,91 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Template</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="email-style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Template</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="email-style.css">
 </head>
+
 <body>
-        <!--Bootstrap Navbar Module-->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">Kyshuf Mail</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <form class="d-flex" role="search" id="search-bar-id">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                      </form>
-                  <li class="nav-item dropdown order-lg-first">
-                    <a class="nav-link dropdown-toggle" id="filter-dropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Filter
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Inbox</a></li>
-                      <li><a class="dropdown-item" href="#">Starred</a></li>
-                      <li><a class="dropdown-item" href="#">Spam</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Drafts</a></li>
-                      <li><a class="dropdown-item" href="#">Deleted</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
-                  </li>
-                </ul>
+  <!--Bootstrap Navbar Module-->
+  <nav class="navbar navbar-expand-md bg-body-tertiary ps-3 pe-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Kyshuf</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0 d-flex">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Inbox</a></li>
+              <li><a class="dropdown-item" href="#">Starred</a></li>
+              <li><a class="dropdown-item" href="#">Spam</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Trash</a></li>
+              <li><a class="dropdown-item" href="#">Drafts</a></li>
+            </ul>
+          </li>
+          <form class="d-flex" role="search" id="search-bar-id">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </ul>
+        <a class="nav-link" href="#">Settings</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--MAIN CONTENT-->
+  <div class="container-fluid main-container">
+    <div class="row h-100">
+      <div class="inbox-desktop d-lg-block col-md-3 col-lg-2"> <!--INBOX COLUMN-->
+
+        <!--Bootstrap module, responsive offcanvas, changes for mobile view-->
+        <div class="offcanvas-md offcanvas-bottom" tabindex="-1" data-bs-backdrop="false" id="offcanvasResponsive"
+          aria-labelledby="offcanvasResponsiveLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">INBOX</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
+              aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body inbox-mobile h-100 d-flex flex-column pt-3">
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis id, magnam cupiditate voluptatibus
+              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
+              deserunt culpa consequuntur?</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-12 col-md-9 col-lg-10"> <!--READER/COMPOSER COLUMN-->
+        <div class="container-fluid main-container">
+          <div class="row h-100 d-flex flex-column flex-lg-row">
+            <div class="message col-md-12 col-lg-7 pt-3 pb-3 d-flex flex-column flex-grow-1 ">
+              <!--Message reader column-->
+              <div class="row ps-3 pe-3">
+                <div class="col-10 col-md-12 subject-container rounded-2 d-flex align-items-center">SUBJECT</div>
+                <div class="col-2 d-md-none d-flex justify-content-center">
+                  <!--Inbox offcanvas trigger at mobile breakpoints-->
+                  <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                    < </div>
+                </div>
+                <div class="col-12 flex-grow-1 mt-3 rounded-2 reader-container p-2">
+                  <p class="reader-text d-flex h-100">
+                    To Whom It May Concern,<br><br>
+                    I am writing to you in hopes that you can provide some information on a problem that has been
+                    bothering my town. we have something of an infestation and have requested previous, numerous times,
+                    for some kind of service professional to be sent to take care of it. Please respond with the
+                    reasoning as to this delay, and when the said profressional will be arriving. <br><br>Best
+                    Wishes,<br>Jeremy Crawford, Regional Supervisor
+                  </p>
+                </div>
               </div>
-            </div>
-          </nav>
 
-        <!--MAIN CONTENT-->
-        <div class="container-fluid">
-          <div class="row">
-            <div class="inbox-desktop d-none d-md-block d-lg-block col-md-3 col-lg-2"> <!--INBOX COLUMN-->
+              <div class="compose col-md-12 col-lg-5 pt-3 pb-3"> <!--compose input column-->
 
-              <!--Bootstrap module, responsive offcanvas, changes for mobile view-->
-              <div class="offcanvas-lg offcanvas-bottom" tabindex="-1" data-bs-backdrop="false" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">INBOX</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+                <!--From bootstrap forms documentation, example text area-->
+                <div>
+                  <textarea class="form-control" id="compose-input" rows="3"></textarea>
+                  <button type="button" class="btn btn-primary">Send</button>
                 </div>
-                
-                <div class="offcanvas-body offcanvas-inbox">
-                  <p class="mb-0">INBOX</p>
-                </div>
-              </div>              
 
-            </div>
-            <div class="col-sm-12 col-md-9 col-lg-10"> <!--READER/COMPOSER COLUMN-->
-              <div class="container-fluid message-compose-container">
-                <div class="row">
-                    <div class="message col-md-12 col-lg-7 pt-3 pb-3  d-flex flex-column flex-fill">
-                      <!--Inbox offcanvas trigger at mobile breakpoints-->
-                      <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">Toggle offcanvas</button>
-                    </div>
-
-                    <div class="compose col-md-12 col-lg-5 pt-3 pb-3">
-                      
-                      <!--From bootstrap forms documentation, example text area-->
-                      <div>
-                        <textarea class="form-control" id="compose-input" rows="3"></textarea>
-                        <button type="button" class="btn btn-primary">Send</button>
-                      </div>
-
-                  </div>
+              </div>
             </div>
           </div>
         </div>
-    </div>
+      </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 
 
 </body>
+
 </html>

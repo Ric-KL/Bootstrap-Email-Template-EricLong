@@ -1,30 +1,68 @@
 /*Global CSS*/
 
-body {overflow-y: auto;
-background-color: pink;
-height: 100vh} 
+body {
+    overflow-y: hidden;
+    background-color: pink;
+    height: 100vh;
+}
 
 /*Class CSS*/
 
-.message {background-color: green;}
-
-.compose {background-color: purple;
-min-height: 20vh;}
-
-.inbox-desktop {background-color: red;
+.main-container {
+    height: 94vh;
 }
 
-.message-compose-container {height:auto}
+.message {
+    background-color: green;
+    max-height: 94vh;
+}
+
+.compose {
+    background-color: purple;
+    min-height: 20vh;
+}
+
+.inbox-desktop {
+    background-color: red;
+    overflow-y: auto;
+    max-height: 94vh;
+}
+
+.inbox-mobile {background-color: red;}
+
+.incoming-mail {
+    border: solid black 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.subject-container {
+    border: solid black 2px;
+}
+
+.reader-container {
+    border: solid black 2px;
+}
+
+.reader-text {overflow-y: auto;}
 
 /*ID CSS*/
 
-#search-bar-id {margin-top: 10px;}
-
-#compose-input {height:12vh}
+#compose-input {
+    height: 12vh
+}
 
 /*Media Queries*/
 
-    @media (min-width: 992px) 
-    {
-        #search-bar-id {margin-top: 0px;} /*Changes search bar margin top to avoid clipping in mobile/tablet format*/
+@media (min-width: 992px) {
+    #compose-input {
+        height: 87vh
     }
+}
+
+@media (max-width: 992px) {
+    .compose {
+        max-height: 22vh;
+    }
+}

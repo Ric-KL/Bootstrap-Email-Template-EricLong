@@ -1,12 +1,20 @@
 /*Global CSS*/
 
 body {
-    overflow-y: hidden;
+    overflow-y: auto;
     background-color: pink;
     height: 100vh;
 }
 
 /*Class CSS*/
+
+.bounds {
+    border: solid yellow 2px
+}
+
+.navbar-spacer {
+    height: 6vh;
+}
 
 .main-container {
     height: 94vh;
@@ -20,15 +28,27 @@ body {
 .compose {
     background-color: purple;
     min-height: 20vh;
+    max-height: 94vh;
 }
 
 .inbox-desktop {
     background-color: red;
-    overflow-y: auto;
     max-height: 94vh;
 }
 
-.inbox-mobile {background-color: red;}
+.inbox-mobile {
+    background-color: red;
+    max-height: 94vh;
+}
+
+.inbox-list {
+    overflow-y: auto;
+    max-height: 80vh
+}
+
+.inbox-header-footer {
+    height: 5vh
+}
 
 .incoming-mail {
     border: solid black 2px;
@@ -45,7 +65,13 @@ body {
     border: solid black 2px;
 }
 
-.reader-text {overflow-y: auto;}
+.reader-text {
+    overflow-y: auto;
+}
+
+.vh-94 {
+    max-height: 94vh
+}
 
 /*ID CSS*/
 

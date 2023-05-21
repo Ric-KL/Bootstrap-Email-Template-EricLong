@@ -13,7 +13,7 @@
 
 <body>
   <!--Bootstrap Navbar Module-->
-  <nav class="navbar navbar-expand-md bg-body-tertiary ps-3 pe-3">
+  <nav class="navbar navbar-expand-md fixed-top bg-body-tertiary ps-3 pe-3">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Kyshuf</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -22,7 +22,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-md-0 d-flex">
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown d-none d-md-block">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Filter
             </a>
@@ -38,8 +38,8 @@
             </ul>
           </li>
           <form class="d-flex" role="search" id="search-bar-id">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <input class="form-control me-2 d-none d-md-block" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success d-none d-md-block" type="submit">Search</button>
           </form>
         </ul>
         <a class="nav-link" href="#">Settings</a>
@@ -48,132 +48,214 @@
   </nav>
 
   <!--MAIN CONTENT-->
+  <div class="container-fluid navbar-spacer"></div>
   <div class="container-fluid main-container">
     <div class="row h-100">
-      <div class="inbox-desktop d-lg-block col-md-3 col-lg-2"> <!--INBOX COLUMN-->
+      <div class="inbox-desktop d-lg-block col-md-3 col-lg-2 p-0"> <!--INBOX COLUMN-->
 
         <!--Bootstrap module, responsive offcanvas, changes for mobile view-->
-        <div class="offcanvas-md offcanvas-bottom" tabindex="-1" data-bs-backdrop="false" id="offcanvasResponsive"
+        <div class="offcanvas-md offcanvas-top" tabindex="-1" data-bs-backdrop="false" id="offcanvasResponsive"
           aria-labelledby="offcanvasResponsiveLabel">
           <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">INBOX</h5>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-3">
+                  <!--Bootstrap Dropdown Module-->
+                  <div class="dropdown">
+                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      FILTER
+                    </a>
+
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Inbox</a></li>
+                      <li><a class="dropdown-item" href="#">Starred</a></li>
+                      <li><a class="dropdown-item" href="#">Spam</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Trash</a></li>
+                      <li><a class="dropdown-item" href="#">Drafts</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-9">
+                  <!--Bootstrap Search Module-->
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                </div>
+              </div>
+            </div>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive"
               aria-label="Close"></button>
           </div>
 
-          <div class="offcanvas-body inbox-mobile h-100 d-flex flex-column pt-3">
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
-            <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reiciendis id, magnam cupiditate voluptatibus
-              error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi natus
-              deserunt culpa consequuntur?</p>
+          <div class="offcanvas-body inbox-mobile h-100 d-flex">
+            <div class="container-fluid vh-94 p-0">
+              <div class="row vh-94">
+                <div
+                  class="col-12 compose-new-button-col mt-2 inbox-header-footer d-flex justify-content-center align-items-center">
+                  <!--Bootstrap button module-->
+                  <div><button type="button" class="btn btn-primary">Compose New Message</button></div>
+                </div>
+                <div class="col-12 inbox-list mt-2 mb-2">
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                  <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis id, magnam cupiditate voluptatibus
+                    error nihil aspernatur vero obcaecati rerum laboriosam distinctio nobis esse beatae harum commodi
+                    natus
+                    deserunt culpa consequuntur?</p>
+                </div>
+                <div class="col-12 mb-3 page-select inbox-header-footer">
+                  <!--Bootstrap Pagination Module-->
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -181,16 +263,19 @@
       <div class="col-sm-12 col-md-9 col-lg-10"> <!--READER/COMPOSER COLUMN-->
         <div class="container-fluid main-container">
           <div class="row h-100 d-flex flex-column flex-lg-row">
-            <div class="message col-md-12 col-lg-7 pt-3 pb-3 d-flex flex-column flex-grow-1 ">
+            <div class="message col-md-12 col-lg-7 pt-3 pb-3 d-flex flex-column flex-grow-1">
               <!--Message reader column-->
-              <div class="row ps-3 pe-3">
-                <div class="col-10 col-md-12 subject-container rounded-2 d-flex align-items-center">SUBJECT</div>
-                <div class="col-2 d-md-none d-flex justify-content-center">
-                  <!--Inbox offcanvas trigger at mobile breakpoints-->
-                  <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-                    < </div>
+              <div class="row ps-3 pe-3 d-flex flex-column h-100">
+                <div class="col-11 col-md-12 subject-container rounded-2 d-flex align-items-center">SUBJECT
                 </div>
+                <div class="col-1 d-md-none d-flex justify-content-center">
+                  <!--Inbox offcanvas trigger at mobile breakpoints-->
+                  <button class="btn btn-primary btn-sm d-lg-none lh-1 m-0" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
+                    < </button>
+                </div>
+                <div class="col-12 mt-1 subject-container rounded-2 d-flex align-items-center">TO: </div>
+                <div class="col-12 mt-1 subject-container rounded-2 d-flex align-items-center">FROM:</div>
                 <div class="col-12 flex-grow-1 mt-3 rounded-2 reader-container p-2">
                   <p class="reader-text d-flex h-100">
                     To Whom It May Concern,<br><br>
@@ -202,24 +287,25 @@
                   </p>
                 </div>
               </div>
+            </div>
 
-              <div class="compose col-md-12 col-lg-5 pt-3 pb-3"> <!--compose input column-->
+            <div class="compose col-md-12 col-lg-5 pt-3 pb-3"> <!--compose input column-->
 
-                <!--From bootstrap forms documentation, example text area-->
-                <div>
-                  <textarea class="form-control" id="compose-input" rows="3"></textarea>
-                  <button type="button" class="btn btn-primary">Send</button>
-                </div>
-
+              <!--From bootstrap forms documentation, example text area-->
+              <div>
+                <textarea class="form-control" id="compose-input" rows="3"></textarea>
+                <button type="button" class="btn btn-primary">Reply</button>
               </div>
+
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"></script>
 
 
 </body>

@@ -51,7 +51,7 @@
   <div class="container-fluid navbar-spacer"></div>
   <div class="container-fluid main-container">
     <div class="row h-100">
-      <div class="inbox-desktop d-lg-block col-md-3 col-lg-2 p-0"> <!--INBOX COLUMN-->
+      <div class="inbox-desktop col-md-4 col-lg-2 p-0"> <!--INBOX COLUMN-->
 
         <!--Bootstrap module, responsive offcanvas, changes for mobile view-->
         <div class="offcanvas-md offcanvas-top" tabindex="-1" data-bs-backdrop="false" id="offcanvasResponsive"
@@ -95,10 +95,9 @@
           <div class="offcanvas-body inbox-mobile h-100 d-flex">
             <div class="container-fluid vh-94 p-0">
               <div class="row vh-94">
-                <div
-                  class="col-12 compose-new-button-col mt-2 inbox-header-footer d-flex justify-content-center align-items-center">
+                <div class="col-12 compose-new-button-col mt-2 inbox-header-footer d-flex justify-content-center align-items-center">
                   <!--Bootstrap button module-->
-                  <div><button type="button" class="btn btn-primary">Compose New Message</button></div>
+                  <button type="button" class="btn btn-primary">Compose New Message</button>
                 </div>
                 <div class="col-12 inbox-list mt-2 mb-2">
                   <p class="incoming-mail rounded-2 mb-1 p-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -260,7 +259,7 @@
         </div>
 
       </div>
-      <div class="col-sm-12 col-md-9 col-lg-10"> <!--READER/COMPOSER COLUMN-->
+      <div class="col-sm-12 col-md-8 col-lg-10"> <!--READER/COMPOSER COLUMN-->
         <div class="container-fluid main-container">
           <div class="row h-100 d-flex flex-column flex-lg-row">
             <div class="message col-md-12 col-lg-7 pt-3 pb-3 d-flex flex-column flex-grow-1">
@@ -270,9 +269,9 @@
                 </div>
                 <div class="col-1 d-md-none d-flex justify-content-center">
                   <!--Inbox offcanvas trigger at mobile breakpoints-->
-                  <button class="btn btn-primary btn-sm d-lg-none lh-1 m-0" type="button" data-bs-toggle="offcanvas"
+                  <button class="btn btn-primary btn-sm lh-1 m-0" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasResponsive" aria-controls="offcanvasResponsive">
-                    < </button>
+                    back </button>
                 </div>
                 <div class="col-12 mt-1 subject-container rounded-2 d-flex align-items-center">TO: </div>
                 <div class="col-12 mt-1 subject-container rounded-2 d-flex align-items-center">FROM:</div>

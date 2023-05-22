@@ -43,7 +43,7 @@ body {
 
 .inbox-list {
     overflow-y: auto;
-    max-height: 80vh
+    max-height: 81vh
 }
 
 .inbox-header-footer {
